@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario | Supermercadosla K</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <main class="page__main">
+            <div class="page">
+                <header class="page__header">
+                    <div class="header">
+                        <div class="header__content">
+                            <h1 class="header__title">🏪 Gestor de inventario Supermercados la K</h1>
+                            <p class="header__subtitle">Gestiona inteligentemente tus productos</p>
+                        </div>
+                    </div>
+                </header>
+                <section class="control__panel">
+                    <div class="control__panel__general">
+                        <div class="search">
+                            <div class="search__field">
+                                <label class="search__label" for="item-search">🔍 Buscar elementos:</label>
+                                <input class="search__input" type="text" id="item-search" placeholder="Nombre del producto a buscar">
+                            </div>
+                            <div class="search-section__field">
+                                <label class="search__label" for="type-filter">📌 Filtro por tipo:</label>
+                                <select class="search__select" id="type-filter">
+                                    <option value="">Todos los tipos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="add__form">
+                            <h3 class="add__form__title"> Nuevo Elemento</h3>
+                            <div class="add-form__fields">
+                                <input class="add__form__input" type="text" id="item__name" placeholder="Nombre">
+                                <input class="add__form__input" type="number" id="item__cost" placeholder="Costo" step="0.01">
+                                <select class="add__form__select" id="item__type">
+                                    <option value="">Selecciona tipo</option>
+                                    <option value="Tecnología">Electrónicos</option>
+                                    <option value="Hogar">Hogar</option>
+                                    <option value="Deportes">Deportes</option>
+                                    <option value="Fitnes">Libros</option>
+                                </select>
+                                <button class="add__form__button" id="save__item__btn">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="data-timeline">
+                    <div class="container__section">
+                        <div class="container__section__header">
+                            <h2 class="container__section__title">📋 Lista de Elementos</h2>
+                            <span class="container__section__badge" id="items-count">0 elementos</span>
+                        </div>
+                        <div class="container__section__content" id="items-container">
+                        </div>
+                    </div>
+
+                    <div class="container__section container__section__unique">
+                        <div class="container__section__header">
+                            <h2 class="container__section__title">📍 Elementos Únicos</h2>
+                            <span class="container__section__badge container__section__badge__unique" id="unique__count">0 únicos</span>
+                        </div>
+                        <div class="container__section__content" id="unique__container">
+                        </div>
+                    </div>
+
+                    <div class="container__section container__section__category">
+                        <div class="container__section__header">
+                            <h2 class="container__section__title">📥 Tipos de Elementos</h2>
+                            <span class="container__section__badge container__section__badge__category" id="types__count">0 tipos</span>
+                        </div>
+                        <div class="container__section__content" id="types__container">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="page__footer">
+            <div class="footer">
+                <p class="footer__text">© 2025 Karina Andrea Henao Zuleta</p>
+            </div>
+        </footer>
+    <script src="gestion_datos.js"></script>
+</body>
+</html>
